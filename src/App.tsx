@@ -1,33 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { HStack, Image, Stack, Text } from '@chakra-ui/react'
+import reactImg from './assets/react.svg'
+import viteImg from './assets/vite.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Stack
+      minHeight={`100vh`}
+      width={`100vw`}
+      backgroundColor={`red.400`}
+      justifyContent={`center`}
+      alignItems={`center`}
+    >
+      <HStack>
+        <Image boxSize={`sm`} src={reactImg} alt={`React Image`} />
+        <Image boxSize={`sm`} src={viteImg} alt={`Vite Image`} />
+      </HStack>
+      <Text fontSize={`2xl`}>Hello World</Text>
+    </Stack>
   )
 }
 
